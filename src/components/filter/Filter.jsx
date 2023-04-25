@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
-import { addFilter } from '../../redux/contacts/filterSlice';
+import { addFilter } from '../../redux/filterSlice';
 
 export const Filter = () => {
   const filter = useSelector(state => state.filter);
   const dispatch = useDispatch();
-  const filterChange = e => {
-    dispatch(addFilter(e.currentTarget.value));
-  };
+    const filterChange = e => {
+      dispatch(addFilter(e.currentTarget.value));
+    };
 
   return (
     <label>
