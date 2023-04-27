@@ -14,9 +14,9 @@ const SharedLayout = () => {
         <NavLink to="/" className={css.link}>
           Home
         </NavLink>
-        <NavLink to="/contacts" className={css.link}>
+        {isLoggedIn && <NavLink to="/contacts" className={css.link}>
           Contacts
-        </NavLink>
+        </NavLink>}
         {isLoggedIn ? (
           <div style={{display: 'flex'}}>
             <p>Welcome, {name}!</p>
