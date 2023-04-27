@@ -7,6 +7,6 @@ export default function PublicRoute({
   redirectTo = '/',
   ...routeProps
 }) {
-  const isLoggedIn = useSelector(authSelectors.isLoggedIn);
+  const isLoggedIn = useSelector(authSelectors.getIsLoggedin);
   return isLoggedIn ? <Navigate to={redirectTo} /> : Component;
 }
