@@ -69,7 +69,7 @@ const LoginView = () => {
             maxHeight: '80px',
           }}
         >
-          Register
+          Log In
         </Button>
       </form>
     </div>
