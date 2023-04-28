@@ -9,6 +9,7 @@ body {
   background-image: url(/src/images/10812307.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: left bottom;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
