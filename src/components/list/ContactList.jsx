@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact } from '../../redux/operations';
 import { getVisibleContacts } from 'redux/selectors';
 import authSelectors from 'redux/auth/auth-selectors';
+import { List, ListItem, Button } from '@mui/material';
 
 export const ContactList = () => {
   const dispatch = useDispatch();
@@ -11,21 +12,27 @@ export const ContactList = () => {
   const handleDelete = id => dispatch(deleteContact(id));
 
   return (
-    <ul>
-      {isLoggedIn && visibleContacts.map(contact => (
-        <li key={contact.id}>
-          {contact.name}: {contact.number}
-          <button
-            type="button"
-            onClick={() => {
-              handleDelete(contact.id);
-            }}
-          >
-            Delete
-          </button>
-        </li>
-      ))}
-    </ul>
+    <List>
+      {isLoggedIn &&
+        visibleContacts.map(contact => (
+          <ListItem key={contact.id} sx={{display: 'flex', justifyContent: 'space-between', maxWidth: 400, fontWeight: 500}}>
+            {contact.name}: {contact.number}
+            <Button
+              variant="contained"
+              type="button"
+              onClick={() => {
+                handleDelete(contact.id);
+              }}
+              sx={{
+                ml: 5,
+                maxWidth: '300px',
+              }}
+            >
+              Delete
+            </Button>
+          </ListItem>
+        ))}
+    </List>
   );
 };
 

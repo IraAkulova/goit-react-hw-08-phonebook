@@ -15,9 +15,9 @@ const Contacts = () => {
       dispatch(fetchContacts());
     }, [dispatch]);
   return (
-        <div>
+    <div>
       <ContactForm />
-      <h2>Contacts</h2>
+      <h2 style={{ marginLeft: 120, color: '#2948ad' }}>My Contacts</h2>
       <Filter />
       {isLoading && !error && <b>Request in progress...</b>}
       <ContactList />

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { addFilter } from '../../redux/filterSlice';
+import TextField from '@mui/material/TextField';
 
 export const Filter = () => {
   const filter = useSelector(state => state.filter);
@@ -10,11 +11,20 @@ export const Filter = () => {
     };
 
   return (
-    <label>
-      Find contacts by name
-      <br></br>
-      <input type="text" value={filter} onChange={filterChange}></input>
-    </label>
+    <TextField
+      autoComplete='off'
+      id="outlined-basic"
+      label="Find contacts by name"
+      variant="outlined"
+      type="text"
+      value={filter}
+      onChange={filterChange}
+      sx={{
+        mt: 2,
+        ml: 5,
+        width: 300,
+      }}
+    />
   );
 };
 
