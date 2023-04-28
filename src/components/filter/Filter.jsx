@@ -12,7 +12,6 @@ export const Filter = () => {
 
   return (
     <TextField
-      autoComplete='off'
       id="outlined-basic"
       label="Find contacts by name"
       variant="outlined"
