@@ -1,6 +1,7 @@
 import { Outlet, NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import authSelectors from 'redux/auth/auth-selectors';
+import { Suspense } from 'react';
 
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
@@ -145,7 +146,9 @@ function SharedLayout() {
           </Toolbar>
         </Container>
       </AppBar>
-      <Outlet />
+      <Suspense fallback={<h4 style={{marginTop: 200, marginLeft: '50%'}}>Loading...</h4>}>
+        <Outlet />
+      </Suspense>
     </>
   );
 }
