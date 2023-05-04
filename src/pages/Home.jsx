@@ -5,6 +5,7 @@ const Home = () => {
   return (
     <Box
       sx={{
+        mt: 20,
         flexGrow: 1,
         display: 'block',
         justifyContent: 'center',
@@ -17,7 +18,7 @@ const Home = () => {
         sx={{
           mr: 2,
           mt: 5,
-          display: { xs: 'none', md: 'flex' },
+          display: 'flex',
           justifyContent: 'center',
           fontFamily: 'Roboto',
           fontWeight: 700,
