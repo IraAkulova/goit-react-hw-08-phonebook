@@ -17,6 +17,7 @@ import MenuItem from '@mui/material/MenuItem';
 import ImportContactsOutlinedIcon from '@mui/icons-material/ImportContactsOutlined';
 import { UserMenu } from 'components/UserMenu';
 import { AuthNav } from 'components/AuthNav';
+import Loader from '../../components/loader/Loader';
 
 function SharedLayout() { 
   const isLoggedIn = useSelector(authSelectors.getIsLoggedin);
@@ -146,7 +147,7 @@ function SharedLayout() {
           </Toolbar>
         </Container>
       </AppBar>
-      <Suspense fallback={<h4 style={{marginTop: 200, marginLeft: '50%'}}>Loading...</h4>}>
+      <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
     </>

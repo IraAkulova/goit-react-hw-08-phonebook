@@ -22,7 +22,7 @@ const Home = () => {
           justifyContent: 'center',
           fontFamily: 'Roboto',
           fontWeight: 700,
-          color: '#2948ad',
+          color: '#1976d2',
           textDecoration: 'none',
           cursor: 'default',
         }}
