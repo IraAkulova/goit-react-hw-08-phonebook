@@ -44,7 +44,7 @@ export const ContactForm = () => {
     return (
       <form onSubmit={handleSubmit} className={css.contactForm}>
         <TextField
-          id="outlined-basic"
+          // id="outlined-basic"
           label="Name"
           variant="outlined"
           type="text"
@@ -61,7 +61,7 @@ export const ContactForm = () => {
           }}
         />
         <TextField
-          id="outlined-basic"
+          // id="outlined-basic"
           label="Number"
           variant="outlined"
           type="tel"
