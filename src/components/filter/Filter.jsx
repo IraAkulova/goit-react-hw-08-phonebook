@@ -9,12 +9,10 @@ export const Filter = () => {
     const filterChange = e => {
       dispatch(addFilter(e.currentTarget.value));
   };
-  console.log({ filter });
 
   return (
     <TextField
       autoComplete='off'
-      // id="outlined-basic"
       label="Find contacts by name"
       variant="outlined"
       type="text"
